@@ -1,0 +1,591 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    background-color: #D3CBC0;
+}
+
+@font-face {
+    font-family: Magnetlight;
+    src: url(/MagnetTrial-ExtraLight-BF65f3b2c458ace.otf);
+}
+
+@font-face {
+    font-family: magnetregular;
+    src: url(/MagnetTrial-Regular-BF65f3b2c4d8cea.otf);
+}
+
+nav {
+    height: 10vh;
+    width: 100%;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    padding: 0px 150px;
+    z-index: 1;
+    transition: all ease 0.4s;
+    border-bottom: 0.2px solid #717767;
+}
+
+.nav:hover {
+    background-color: #FFFDF5;
+}
+
+nav p {
+    font-family: magnetlight;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 20%;
+
+    height: 100%;
+
+    line-height: 15px;
+}
+
+.logo p span {
+    font-weight: 900 !important;
+    font-family: magnetregular;
+}
+.logo p br{
+  text-size : 18px
+}
+.nav-links {
+    height: 100%;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.nav-links p {
+    font-size: 18px;
+    color: #000;
+    font-weight: 500;
+}
+
+.button-container {
+    height: 100%;
+    width: 30%;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    justify-content: end;
+}
+
+.credit-text {
+    display: flex;
+    gap: 5px;
+    margin-right: 15px;
+}
+
+.credit-text h4 {
+    font-family: magnetlight;
+    font-size: 12px;
+    color: #717767;
+}
+
+.credit-svg {
+    border: 1px solid transparent;
+}
+
+.cart-svg,
+.profile-svg {
+    border: 1px solid #403F3D;
+    border-radius: 4px;
+    padding: 2px;
+    font-size: 28px;
+}
+
+main {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero {
+    height: 100vh;
+    width: 100%;
+    position: relative;
+}
+
+.hero img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+
+
+}
+
+.overlay {
+    height: 100%;
+    width: 100%;
+    background-color: #00000000;
+    position: absolute;
+    top: 0;
+    padding-top: 120px;
+    padding-left: 150px;
+}
+
+.overlay h1 {
+    width: 50%;
+    font-size: 60px;
+    font-family: magnetlight;
+    margin-bottom: 150px;
+    line-height: 80px;
+}
+
+.card-container {
+    display: flex;
+    gap: 20px;
+    width: 100%;
+}
+
+.card {
+    height: 280px;
+    width: 280px;
+    background-color: rgba(255, 255, 255, 0.389);
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(10px);
+    transition: all ease 0.5s;
+    position: relative;
+
+}
+
+.text-container p {
+    font-size: 26px;
+    font-family: magnetlight;
+    transition: all ease 0.2s;
+
+}
+
+.text-container {
+    height: 4vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.card:hover {
+    background-color: #FFFDF5;
+}
+
+.card:hover p {
+    margin-top: -20%;
+}
+
+.pragaraph-container {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 2px;
+    bottom: 40%;
+    width: 100%;
+    left: 10px;
+    z-index: 9999;
+}
+
+.pragaraph-container .para {
+    width: 100%;
+    height: 2vh;
+
+    position: relative;
+    overflow: hidden;
+
+}
+
+.pragaraph-container .para h4 {
+    font-size: 12px;
+    position: absolute;
+    width: 100%;
+    height: 2vh;
+    left: 0;
+    top: 100%;
+
+    font-family: magnetlight;
+    transition: all ease 0.5s;
+    opacity: 0;
+}
+
+.card:hover .pragaraph-container .para h4 {
+    top: 0;
+
+}
+
+.card:hover .pragaraph-container .para h4 {
+    opacity: 1;
+ 
+}
+
+.arrow-container {
+    height: 5vh;
+    font-family: magnetlight;
+    font-size: 10px;
+    width: 100%;
+    bottom: 5%;
+    opacity: 0;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 10px;
+    transition: all ease 0.5s;
+}
+
+.horizontal-line {
+    height: 1px;
+    width: 0%;
+    bottom: 22%;
+    background-color: #403F3D;
+    position: absolute;
+    left: 10px;
+    opacity: 0;
+    transition: all ease 0.5s;
+
+}
+
+
+.card:hover .arrow-container {
+    opacity: 1;
+    bottom: 8%;
+}
+
+.card:hover .horizontal-line {
+    width: 90%;
+    opacity: 1;
+}
+
+.marquee {
+    height: 100vh;
+    width: 100%;
+    background-color: #DFDAC6;
+    position: relative;
+}
+
+.marquee img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    scale: 0.5;
+}
+
+.marquee-overlay {
+    height: 100%;
+    width: 100%;
+    background-color: #00000000;
+    position: absolute;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    flex-direction: column;
+}
+
+.marquee-divs {
+    height: 8vh;
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    gap: 20px; 
+}
+.marquee-track-top {
+    display: flex;
+    gap: 20px;
+    width: max-content;
+    animation: marquee 12s linear infinite;
+}
+.marquee-container {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    height: 100%;
+
+    justify-content: center;
+    background-color: rgb(186, 186, 171);
+    flex-shrink: 0; 
+}
+.marquee-container h1{
+    font-family: magnetlight;
+    font-size: 40px;
+}
+
+@keyframes marquee {
+    0%{
+        transform:translateX(0%);
+    }
+    100%{
+        transform: translateX(-50%);
+    }
+}
+
+
+.marquee-track-top{
+    display: flex;
+    gap: 20px;
+    width: max-content;
+    animation: marquee 12s linear infinite;
+}
+.marquee-container{
+    flex-shrink: 0;
+
+}
+.marquee-container h1{
+    font-family: magnetlight;
+    font-size: 50px;
+}
+
+@keyframes marquee {
+    0%{
+        transform: translateX(0%);
+    }
+    100%{
+        transform: translateX(-50%);
+    }
+}
+
+.marquee-track-bottom{
+    display: flex;
+    gap: 20px;
+    width: max-content;
+    animation: marquee-bottom 12s linear infinite;
+}
+
+@keyframes marquee-bottom {
+    0%{
+        transform: translateX(-50%);
+    }
+    100%{
+        transform: translateX(0%);
+    }
+}
+
+.image-container{
+    height: 100vh;
+    width: 100%;
+    background-color: #ea96cc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    position: relative;
+}
+.image-container img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    position: absolute;
+    opacity: 0;
+    transition: all ease 0.5s;
+}
+.cards{
+    height: 250px;
+    width: 250px;
+    background-color: rgb(177, 177, 164);
+    border-radius: 20px;
+    z-index: 2;
+    transition: all ease 0.5s;
+}
+.cards:hover{
+    height: 350px;
+    width: 350px;
+}
+.cards1:hover ~ .image1{
+    opacity: 1;
+}
+.cards2:hover ~ .image2{
+    opacity: 1;
+}
+.cards3:hover ~ .image3{
+    opacity: 1;
+}
+
+.cards:hover .arrow-container {
+    opacity: 1;
+    bottom: 8%;
+}
+
+.cards:hover .horizontal-line {
+    width: 90%;
+    opacity: 1;
+}
+
+.image-container{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    position: relative;
+}
+.image-container img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    position: absolute;
+    opacity: 0;
+    transition: all ease 0.5s;
+   
+}
+.cards{
+    height: 250px;
+    width: 250px;
+    background-color: white;
+    border-radius: 20px;
+    z-index: 2;
+    display: flex;
+    transition: all ease 0.5s;
+}
+.cards:hover{
+    height: 350px;
+    width: 350px;
+}
+.cards1:hover ~ .image1{
+    opacity: 1;
+}
+.cards2:hover ~ .image2{
+    opacity: 1;
+}
+.cards3:hover ~ .image3{
+    opacity: 1;
+}
+.cards {
+    height: 280px;
+    width: 280px;
+    background-color: rgba(255, 255, 255, 0.389);
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(10px);
+    transition: all ease 0.5s;
+    position: relative;
+
+}
+
+.text-container p {
+    font-size: 26px;
+    font-family: magnetlight;
+    transition: all ease 0.4s;
+
+}
+
+.text-container {
+    height: 4vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+
+
+}
+
+.cards:hover {
+    background-color: #FFFDF5;
+}
+
+.cards:hover p {
+    margin-top: -20%;
+}
+
+.pragaraph-container {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 2px;
+    bottom: 40%;
+    width: 100%;
+    left: 10px;
+    z-index: 9999;
+}
+
+.pragaraph-container .para {
+    width: 100%;
+    height: 2vh;
+
+    position: relative;
+    overflow: hidden;
+
+}
+
+.pragaraph-container .para h4 {
+    font-size: 12px;
+    position: absolute;
+    width: 100%;
+    height: 2vh;
+    left: 0;
+    top: 100%;
+
+    font-family: magnetlight;
+    transition: all ease 0.5s;
+    opacity: 0;
+}
+
+.cards:hover .pragaraph-container .para h4 {
+    top: 0;
+
+}
+
+.cards:hover .pragaraph-container .para h4 {
+    opacity: 1;
+ 
+}
+
+.arrow-container {
+    height: 5vh;
+    font-family: magnetlight;
+    font-size: 10px;
+    width: 100%;
+    bottom: 5%;
+    opacity: 0;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 10px;
+    transition: all ease 0.5s;
+}
+
+.horizontal-line {
+    height: 1px;
+    width: 0%;
+    bottom: 22%;
+    background-color: #403F3D;
+    position: absolute;
+    left: 10px;
+    opacity: 0;
+    transition: all ease 0.5s;
+
+}
+
+
+.cards:hover .arrow-container {
+    opacity: 1;
+    bottom: 8%;
+}
+
+.cards:hover .horizontal-line {
+    width: 90%;
+    opacity: 1;
